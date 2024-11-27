@@ -1,18 +1,20 @@
-import singlylinkedlist.SinglyLinkedList;
+import circularsinglylinkedlist.CircularSinglyLinkedList;
 
 class Main {
 
     public static void main(String[] args) {
-        // Singly LL
-        SinglyLinkedList sLL = new SinglyLinkedList();
-        sLL.createSinglyLinkedList(11);
-
-        // System.out.println(sLL.head.value);
-        sLL.insertInLinkedList(6, 1);
-        sLL.insertInLinkedList(7, 3);
-        sLL.insertInLinkedList(8, 4);
-        sLL.insertInLinkedList(9, 5);
-        sLL.insertInLinkedList(10, 2);
-        sLL.traverseSinglyLinkedList();
+        // Circular SLL
+    	CircularSinglyLinkedList csll=new CircularSinglyLinkedList();
+    	
+    	csll.createCSLL(11);
+    	csll.insertCSLL(12, 0);
+    	csll.insertCSLL(13, 1);
+    	csll.insertCSLL(14, 5);
+    	csll.traverseCSLL();
+//    	csll.searchNode(15);
+//    	csll.deleteNodeCSLL(1);
+    	csll.deleteCSLL();
+    	csll.traverseCSLL();
+    	
     }
 }
