@@ -1,17 +1,15 @@
-import queue.circular_queue_using_array.CircularQueue;
+import queue.queue_using_linkedlist.QueueLinkedList;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Circular Queue using Array
-		
-		CircularQueue newCq=new CircularQueue(4);
-		newCq.enQueue(11);
-		newCq.enQueue(12);
-		newCq.enQueue(13);
-		newCq.enQueue(14);
-		System.out.println(newCq.deQueue());
-		newCq.enQueue(15);
-		newCq.deleteQueue();
+		// Queue using LinkedList
+		QueueLinkedList newQLL=new QueueLinkedList();
+		newQLL.enQueue(11);
+		newQLL.enQueue(12);
+		newQLL.enQueue(13);
+		newQLL.enQueue(14);
+		System.out.println(newQLL.deQueue());
+//		newQLL.deleteQueue();
 	}
 }
