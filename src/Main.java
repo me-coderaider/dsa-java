@@ -1,17 +1,15 @@
-import stack.stack_using_linkedlist.Stack;
+import queue.queue_using_array.QueueArray;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Stack using linkedlist
-		Stack newStack=new Stack();
-		newStack.push(11);
-		newStack.push(12);
-		newStack.push(13);
-		System.out.println(newStack.peek());
-		System.out.println(newStack.peek());
+		// Queue using Array
+		QueueArray newQueue=new QueueArray(3);
+		newQueue.enQueue(11);
+		newQueue.enQueue(12);
+		newQueue.enQueue(13);
 		
-		newStack.deleteStack();
-		
+		newQueue.deleteQueue();
+				
 	}
 }
