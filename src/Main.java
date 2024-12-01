@@ -1,33 +1,25 @@
-import recursion.Recursion;
+import basic_tree.TreeNode;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Factorial
-		Recursion f=new Recursion();
-//		Factorial
-//		int result=f.factorial(6);
-//		System.out.println(result);
+		// Basic Tree Example
+		TreeNode drinks=new TreeNode("Drinks");
+		TreeNode hot=new TreeNode("Hot");
+		TreeNode cold=new TreeNode("Cold");
+		TreeNode tea=new TreeNode("Tea");
+		TreeNode coffee=new TreeNode("Coffee");
+		TreeNode wine=new TreeNode("Wine");
+		TreeNode beer=new TreeNode("Beer");
+		drinks.addChild(hot);
+		drinks.addChild(cold);
 		
-//		Fibonacci Series
-//		int result=f.fibonacci(4);
-//		System.out.println(result);
+		hot.addChild(tea);
+		hot.addChild(coffee);
 		
-//		Sum Of Digits
-//		int result=f.sumOfDigits(123);
-//		System.out.println(result);
+		cold.addChild(wine);
+		cold.addChild(beer);
 		
-//		Power
-//		int result=f.power(7, 3);
-//		System.out.println(result);
-		
-//		GCD
-//		int result=f.gcd(4, 8);
-//		System.out.println(result);
-		
-//		Decimal to Binary
-		int result=f.decimalToBinary(2);
-		System.out.println(result);
-		
+		System.out.println(drinks.print(0));
 	}
 }
