@@ -1,15 +1,33 @@
-import queue.queue_using_linkedlist.QueueLinkedList;
+import recursion.Recursion;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Queue using LinkedList
-		QueueLinkedList newQLL=new QueueLinkedList();
-		newQLL.enQueue(11);
-		newQLL.enQueue(12);
-		newQLL.enQueue(13);
-		newQLL.enQueue(14);
-		System.out.println(newQLL.deQueue());
-//		newQLL.deleteQueue();
+		// Factorial
+		Recursion f=new Recursion();
+//		Factorial
+//		int result=f.factorial(6);
+//		System.out.println(result);
+		
+//		Fibonacci Series
+//		int result=f.fibonacci(4);
+//		System.out.println(result);
+		
+//		Sum Of Digits
+//		int result=f.sumOfDigits(123);
+//		System.out.println(result);
+		
+//		Power
+//		int result=f.power(7, 3);
+//		System.out.println(result);
+		
+//		GCD
+//		int result=f.gcd(4, 8);
+//		System.out.println(result);
+		
+//		Decimal to Binary
+		int result=f.decimalToBinary(2);
+		System.out.println(result);
+		
 	}
 }
