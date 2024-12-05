@@ -1,21 +1,19 @@
-import binary_heap.BinaryHeap;
+import trie.Trie;
 
 class Main {
 
 	public static void main(String[] args) {
-		// BinaryHeap
+		// Trie
+
+		Trie newTrie = new Trie();
+		newTrie.insert("API");
+		newTrie.insert("APIS");
 		
-		BinaryHeap newBH=new BinaryHeap(5);
-		newBH.insert(10, "Max");
-		newBH.insert(5, "Max");
-		newBH.insert(15, "Max");
-		newBH.insert(1, "Max");
+		newTrie.search("APIS");
 		
-		newBH.levelOrder();
-		newBH.extractHeapOfBP("Max");
-		newBH.levelOrder();
+		newTrie.delete("API");
 		
-		newBH.deleteBH();
+		newTrie.search("API");
 	}
 
 }
