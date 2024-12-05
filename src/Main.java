@@ -1,19 +1,24 @@
-import trie.Trie;
+import hashing.direct_chaining.DirectChaining;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Trie
-
-		Trie newTrie = new Trie();
-		newTrie.insert("API");
-		newTrie.insert("APIS");
+		// Hashing -- Direct Chaining
 		
-		newTrie.search("APIS");
+		DirectChaining directChaining=new DirectChaining(15);
+		directChaining.insertHashTable("The");
+		directChaining.insertHashTable("quick");
+		directChaining.insertHashTable("brown");
+		directChaining.insertHashTable("fox");
+		directChaining.insertHashTable("jumps");
 		
-		newTrie.delete("API");
+		directChaining.displayHashTable();
+//		directChaining.searchHashTable("fox");
 		
-		newTrie.search("API");
+		directChaining.deleteKeyHashTable("fox");
+		directChaining.displayHashTable();
+		
 	}
+	
 
 }
