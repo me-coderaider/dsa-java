@@ -1,15 +1,22 @@
 
-import sorting_algorithms.MergeSort;
+import sorting_algorithms.QuickSort;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Sorting -- Merge Sort
-		int[] arr = { 10, 3, 2, 5, 8, 4, 3, 1, 2, 9, 7, 8 };
-		
-		MergeSort.mergeSort(arr, 0, arr.length-1);
-		MergeSort.printArray(arr);
-		
+
+		// Sorting -- Quick Sort
+		int[] arr = { 10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11 };
+		QuickSort.quickSort(arr, 0, arr.length - 1);
+
+		QuickSort.printArray(arr);
+
+//		// Sorting -- Merge Sort
+//		int[] arr = { 10, 3, 2, 5, 8, 4, 3, 1, 2, 9, 7, 8 };
+//		
+//		MergeSort.mergeSort(arr, 0, arr.length-1);
+//		MergeSort.printArray(arr);
+
 //		// Sorting -- Bucket Sort -- good if data is uniformly distributed over range
 //		int[] arr = { 9, 7, 5, 4, 2, 1, 3, 6, 8 ,10, 11};
 //		BucketSort bucketSort=new BucketSort(arr);
