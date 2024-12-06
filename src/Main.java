@@ -1,15 +1,21 @@
 
-import sorting_algorithms.QuickSort;
+import sorting_algorithms.HeapSort;
 
 class Main {
 
 	public static void main(String[] args) {
-
-		// Sorting -- Quick Sort
-		int[] arr = { 10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11 };
-		QuickSort.quickSort(arr, 0, arr.length - 1);
-
-		QuickSort.printArray(arr);
+		// Sorting -- Heap Sort
+		int[] arr = { 2,7,3,1,4,8,9};
+		HeapSort hs=new HeapSort(arr);
+		hs.sort();
+		hs.printArray(arr);
+		
+		
+//		// Sorting -- Quick Sort
+//		int[] arr = { 10, 3, 2, 7, 7, 5, 8, 4, 1, 2, 9, 7, 8, 11 };
+//		QuickSort.quickSort(arr, 0, arr.length - 1);
+//
+//		QuickSort.printArray(arr);
 
 //		// Sorting -- Merge Sort
 //		int[] arr = { 10, 3, 2, 5, 8, 4, 3, 1, 2, 9, 7, 8 };
