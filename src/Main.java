@@ -1,8 +1,9 @@
 
 import java.util.ArrayList;
 
-import graph.graph_representation.using_adjacency_matrix.Graph;
-import graph.graph_representation.using_adjacency_matrix.GraphNode;
+import graph.graph_representation.using_adjacency_list.Graph;
+import graph.graph_representation.using_adjacency_list.GraphNode;
+
 
 class Main {
 
