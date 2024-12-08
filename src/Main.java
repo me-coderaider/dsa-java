@@ -1,8 +1,9 @@
 
 import java.util.ArrayList;
 
-import graph.traversal.bfs_on_graph_using_adjacency_matrix.Graph;
-import graph.traversal.bfs_on_graph_using_adjacency_matrix.GraphNode;
+import graph.traversal.bfs_on_graph_using_adjacency_list.Graph;
+import graph.traversal.bfs_on_graph_using_adjacency_list.GraphNode;
+
 
 
 
