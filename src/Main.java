@@ -1,8 +1,9 @@
 
 import java.util.ArrayList;
 
-import graph.ssspp.using_bfs.on_graph_using_adjacency_list.Graph;
-import graph.ssspp.using_bfs.on_graph_using_adjacency_list.GraphNode;
+import graph.ssspp.using_bfs.on_graph_using_adjacency_matrix.Graph;
+import graph.ssspp.using_bfs.on_graph_using_adjacency_matrix.GraphNode;
+
 
 class Main {
 
