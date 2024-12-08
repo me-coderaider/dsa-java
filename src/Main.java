@@ -1,8 +1,9 @@
 
 import java.util.ArrayList;
 
-import graph.topological_sort.on_graph_using_adjacency_list.Graph;
-import graph.topological_sort.on_graph_using_adjacency_list.GraphNode;
+import graph.topological_sort.on_graph_using_adjacency_matrix.Graph;
+import graph.topological_sort.on_graph_using_adjacency_matrix.GraphNode;
+
 
 
 class Main {
@@ -47,7 +48,7 @@ class Main {
 		
 		System.out.println(g.toString());
 		
-		g.topologicSort();
+		g.topologicalSort();
 	}
 
 }
