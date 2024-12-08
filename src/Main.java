@@ -1,9 +1,8 @@
 
 import java.util.ArrayList;
 
-import graph.traversal.dfs_on_graph_using_adjacency_matrix.Graph;
-import graph.traversal.dfs_on_graph_using_adjacency_matrix.GraphNode;
-
+import graph.topological_sort.on_graph_using_adjacency_list.Graph;
+import graph.topological_sort.on_graph_using_adjacency_list.GraphNode;
 
 
 class Main {
@@ -18,25 +17,37 @@ class Main {
 		nodeList.add(new GraphNode("C", 2));
 		nodeList.add(new GraphNode("D", 3));
 		nodeList.add(new GraphNode("E", 4));
+		nodeList.add(new GraphNode("F", 5));
+		nodeList.add(new GraphNode("G", 6));
+		nodeList.add(new GraphNode("H", 7));
 		
 		// creating 'graph' from nodes 'nodeList'
-//		A --- B
-//		| \     \
-//		|  \      E
-//		|   \   /
-//		C --- D 
+//		A       B
+//		⬇️     ↙️ ⬇️
+//		⬇️   ↙️   ⬇️  
+//		⬇️ ↙️     ⬇️
+//		C       D
+//		⬇️       ↙️
+//		⬇️      ↙️
+//		E     ↙️
+//	   ↙️ ↘️	 ↙️
+//	 ↙️	   ↘️↙️ 	
+//	H		F → → → → G
+			
 		Graph g=new Graph(nodeList);
-		g.addUndirectedEdge(0, 1); // A - B
-		g.addUndirectedEdge(0, 2); // A - C
-		g.addUndirectedEdge(0, 3); // A - D
-		g.addUndirectedEdge(1, 4); // B - E
-		g.addUndirectedEdge(2, 3); // C - D
-		g.addUndirectedEdge(3, 4); // D - E
+		g.addDirectedEdge(0, 2); // A - C
+		g.addDirectedEdge(1, 2); // B - C
+		g.addDirectedEdge(1, 3); // B - D
+		g.addDirectedEdge(2, 4); // C - E
+		g.addDirectedEdge(3, 5); // D - F
+		g.addDirectedEdge(4, 7); // E - H
+		g.addDirectedEdge(4, 5); // E - F
+		g.addDirectedEdge(5, 6); // F - G
 		
 		
 		System.out.println(g.toString());
 		
-		g.dfs();
+		g.topologicSort();
 	}
 
 }
