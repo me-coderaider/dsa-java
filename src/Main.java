@@ -1,9 +1,8 @@
 
 import java.util.ArrayList;
 
-import graph.ssspp.using_bfs.on_graph_using_adjacency_matrix.Graph;
-import graph.ssspp.using_bfs.on_graph_using_adjacency_matrix.GraphNode;
-
+import graph.ssspp.using_dijkstras.WeightedGraph;
+import graph.ssspp.using_dijkstras.WeightedNode;
 
 class Main {
 
@@ -11,40 +10,41 @@ class Main {
 		// Graph -- Graph Representation -- using Adjacency Matrix
 
 		// creating nodes for graph
-		ArrayList<GraphNode> nodeList = new ArrayList<>();
-		nodeList.add(new GraphNode("A", 0));
-		nodeList.add(new GraphNode("B", 1));
-		nodeList.add(new GraphNode("C", 2));
-		nodeList.add(new GraphNode("D", 3));
-		nodeList.add(new GraphNode("E", 4));
-		nodeList.add(new GraphNode("F", 5));
-		nodeList.add(new GraphNode("G", 6));
+		ArrayList<WeightedNode> nodeList = new ArrayList<>();
+		nodeList.add(new WeightedNode("A", 0));
+		nodeList.add(new WeightedNode("B", 1));
+		nodeList.add(new WeightedNode("C", 2));
+		nodeList.add(new WeightedNode("D", 3));
+		nodeList.add(new WeightedNode("E", 4));
+		nodeList.add(new WeightedNode("F", 5));
+		nodeList.add(new WeightedNode("G", 6));
 
-		// creating 'graph' from nodes 'nodeList' 
-//		A ----- B
-//		|       | \
-//		|       |   \
-//		|       |     \
-//		C ----- D      G
-//		|      	|	 /
-//		|       |  /
-//		E ----- F 
+		// creating 'graph' from nodes 'nodeList'
+//		B ➡️ 3 ➡️ E
+//	  ↗️	⬇️↘️       ↗️  ↘️  
+//	 2	⬇️  1    4     9
+//  ↗️	⬇️    ↘️↗️         ↘️
+// A    6    D          G   
+//	↘️	⬇️      		  ↗️
+//	 5  ⬇️            7
+//	  ↘️	⬇️           ↗️
+//		C ➡️ 8 ➡️ F 
 
-		Graph g = new Graph(nodeList);
-		g.addUndirectedEdge(0, 1); // A - B
-		g.addUndirectedEdge(0, 2); // A - C
-		g.addUndirectedEdge(1, 3); // B - D
-		g.addUndirectedEdge(1, 6); // B - G
-		g.addUndirectedEdge(2, 3); // C - D
-		g.addUndirectedEdge(2, 4); // C - E
-		g.addUndirectedEdge(3, 5); // D - F
-		g.addUndirectedEdge(4, 5); // E - F
-		g.addUndirectedEdge(5, 6); // F - G
+		WeightedGraph g = new WeightedGraph(nodeList);
+		g.addWeightedEdge(0, 1, 2); // A - B
+		g.addWeightedEdge(0, 2, 5); // A - C
+		g.addWeightedEdge(1, 2, 6); // B - C
+		g.addWeightedEdge(1, 3, 1); // B - D
+		g.addWeightedEdge(1, 4, 3); // B - E
+		g.addWeightedEdge(2, 5, 8); // C - F
+		g.addWeightedEdge(3, 4, 4); // D - E
+		g.addWeightedEdge(4, 6, 9); // E - G
+		g.addWeightedEdge(5, 6, 7); // F - G
 
-		System.out.println(g.toString());
-		
+//		System.out.println(g.toString());
+
 		// considering node 'A' as 'SOURCE' node
-		g.BFSForSSSPP(nodeList.get(0));
+		g.dijkstra(nodeList.get(0));
 	}
 
 }
