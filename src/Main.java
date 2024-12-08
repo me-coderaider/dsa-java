@@ -1,11 +1,8 @@
 
 import java.util.ArrayList;
 
-import graph.traversal.bfs_on_graph_using_adjacency_list.Graph;
-import graph.traversal.bfs_on_graph_using_adjacency_list.GraphNode;
-
-
-
+import graph.traversal.dfs_on_graph_using_adjacency_list.Graph;
+import graph.traversal.dfs_on_graph_using_adjacency_list.GraphNode;
 
 class Main {
 
@@ -37,7 +34,7 @@ class Main {
 		
 		System.out.println(g.toString());
 		
-		g.bfs();
+		g.dfs();
 	}
 
 }
