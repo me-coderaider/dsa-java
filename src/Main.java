@@ -1,8 +1,9 @@
 
 import java.util.ArrayList;
 
-import graph.graph_representation.using_adjacency_list.Graph;
-import graph.graph_representation.using_adjacency_list.GraphNode;
+import graph.traversal.bfs_on_graph_using_adjacency_matrix.Graph;
+import graph.traversal.bfs_on_graph_using_adjacency_matrix.GraphNode;
+
 
 
 class Main {
@@ -34,6 +35,8 @@ class Main {
 		
 		
 		System.out.println(g.toString());
+		
+		g.bfs();
 	}
 
 }
