@@ -1,9 +1,8 @@
 
 import java.util.ArrayList;
 
-import graph.ssspp.using_bellman_ford.WeightedGraph;
-import graph.ssspp.using_bellman_ford.WeightedNode;
-
+import graph.apspp.using_floyd_warshall.WeightedGraph;
+import graph.apspp.using_floyd_warshall.WeightedNode;
 
 class Main {
 
@@ -16,38 +15,28 @@ class Main {
 		nodeList.add(new WeightedNode("B", 1));
 		nodeList.add(new WeightedNode("C", 2));
 		nodeList.add(new WeightedNode("D", 3));
-		nodeList.add(new WeightedNode("E", 4));
-		nodeList.add(new WeightedNode("F", 5));
-		nodeList.add(new WeightedNode("G", 6));
 
 		// creating 'graph' from nodes 'nodeList'
-//		B ➡️ 3 ➡️ E
-//	  ↗️	⬇️↘️       ↗️  ↘️  
-//	 2	⬇️  1    4     9
-//  ↗️	⬇️    ↘️↗️         ↘️
-// A    6    D          G   
-//	↘️	⬇️      		  ↗️
-//	 5  ⬇️            7
-//	  ↘️	⬇️           ↗️
-//		C ➡️ 8 ➡️ F 
+//		A -> 8 ->  B
+//	  	⬇️ ↖️      ↗️ ⬇️  
+//		⬇️    ↖️ ↗️   ⬇️
+//		1   2 ↖️    1
+//  	⬇️  ↗️    4  ⬇️
+//      D  -> 9 -> C
 
 		WeightedGraph g = new WeightedGraph(nodeList);
-		g.addWeightedEdge(0, 1, 2); // A - B
-		g.addWeightedEdge(0, 2, 5); // A - C
-		g.addWeightedEdge(1, 2, 6); // B - C
-		g.addWeightedEdge(1, 3, 1); // B - D
-		g.addWeightedEdge(1, 4, 3); // B - E
-//		g.addWeightedEdge(4, 1, -6); // B - E // FOR NEGATIVE CYCLE TESTING
-		g.addWeightedEdge(2, 5, 8); // C - F
-		g.addWeightedEdge(3, 4, 4); // D - E
-		g.addWeightedEdge(4, 6, 9); // E - G
-		g.addWeightedEdge(5, 6, 7); // F - G
+		g.addWeightedEdge(0, 1, 8); // A - B
+		g.addWeightedEdge(0, 3, 1); // A - D
+		g.addWeightedEdge(1, 2, 1); // B - C
+		g.addWeightedEdge(2, 0, 4); // C - A
+		g.addWeightedEdge(3, 2, 9); // D - C
+		g.addWeightedEdge(3, 1, 2); // D - B
 
 //		System.out.println(g.toString());
 
 		// considering node 'A' as 'SOURCE' node
-		System.out.println("Printing Bellman Ford from source: A");
-		g.bellmanFord(nodeList.get(0));
+		System.out.println("Printing Floyd Warshall algorithm from source: A");
+		g.floydWarshall();
 	}
 
 }
