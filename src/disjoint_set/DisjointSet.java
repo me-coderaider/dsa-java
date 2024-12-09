@@ -32,6 +32,7 @@ public class DisjointSet {
 				// adding 'set2' smaller set nodes in 'set1'
 				ArrayList<WeightedNode> nodeSet2 = set2.nodeList;
 				for (WeightedNode node : nodeSet2) {
+					node.set=set1;
 					set1.nodeList.add(node);
 				}
 				return set1;
@@ -39,6 +40,7 @@ public class DisjointSet {
 				// adding 'set1' smaller set nodes in 'set2'
 				ArrayList<WeightedNode> nodeSet1 = set1.nodeList;
 				for (WeightedNode node : nodeSet1) {
+					node.set=set2;
 					set2.nodeList.add(node);
 				}
 				return set2;
