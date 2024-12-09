@@ -1,8 +1,9 @@
 
 import java.util.ArrayList;
 
-import graph.mst.kruskals.Kruskal;
-import graph.mst.kruskals.WeightedNode;
+import graph.mst.prims.Prim;
+import graph.mst.prims.WeightedNode;
+
 
 
 class Main {
@@ -26,7 +27,7 @@ class Main {
 // \ 20	|  /       |
 //      C  -- 6 -- D
 
-		Kruskal graph=new Kruskal(nodeList);
+		Prim graph=new Prim(nodeList);
 		graph.addWeightedUndirectedEdge(0, 1, 5); // A - B
 		graph.addWeightedUndirectedEdge(0, 2, 13); // A - C
 		graph.addWeightedUndirectedEdge(0, 4, 15); // A - E
@@ -37,8 +38,8 @@ class Main {
 
 //		System.out.println(g.toString());
 
-		System.out.println("Running Kruskal Algo on the graph: ");
-		graph.kruskal();
+		System.out.println("Running Prim's Algo on the graph: ");
+		graph.prims(nodeList.get(4));
 	}
 
 }
