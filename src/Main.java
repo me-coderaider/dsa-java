@@ -1,14 +1,13 @@
-import divide_and_conquer.number_factor.NumberFactor;
+import divide_and_conquer.house_robber.HouseRobber;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Divide and Conquer -- Number Factor
-		
-		NumberFactor numF=new NumberFactor();
-		System.out.println(numF.waysToGetN(4));
-		System.out.println(numF.waysToGetN(5));
-		System.out.println(numF.waysToGetN(6));
+		// Divide and Conquer -- House Robber
+
+		HouseRobber houseRobber = new HouseRobber();
+		int[] houseNetWorth = { 6, 7, 1, 30, 8, 2, 4 };
+		System.out.println(houseRobber.maxMoney(houseNetWorth));
 	}
 
 }
