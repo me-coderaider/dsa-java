@@ -1,25 +1,14 @@
-import java.util.ArrayList;
-
-import greedy_algorithms.fractional_knapsack_problem.FractionalKnapsack;
-import greedy_algorithms.fractional_knapsack_problem.KnapsackItem;
-
+import divide_and_conquer.number_factor.NumberFactor;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Greedy Algorithms -- Fractional Knapsack Problem
+		// Divide and Conquer -- Number Factor
 		
-		ArrayList<KnapsackItem> items=new ArrayList<KnapsackItem>();
-		int[] value= {100,120,60};
-		int[] weight= {20,30,10};
-		
-		int capacity=50;
-		
-		for(int i=0;i<value.length;i++) {
-			items.add(new KnapsackItem(i+1, value[i], weight[i]));
-		}
-		
-		FractionalKnapsack.knapsack(items, capacity);
+		NumberFactor numF=new NumberFactor();
+		System.out.println(numF.waysToGetN(4));
+		System.out.println(numF.waysToGetN(5));
+		System.out.println(numF.waysToGetN(6));
 	}
 
 }
