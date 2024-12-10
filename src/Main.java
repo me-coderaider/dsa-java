@@ -1,13 +1,13 @@
-import divide_and_conquer.house_robber.HouseRobber;
+import divide_and_conquer.convert_one_string_to_another.ConvertOneStringToAnother;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Divide and Conquer -- House Robber
-
-		HouseRobber houseRobber = new HouseRobber();
-		int[] houseNetWorth = { 6, 7, 1, 30, 8, 2, 4 };
-		System.out.println(houseRobber.maxMoney(houseNetWorth));
+		// Divide and Conquer -- Convert one string to another
+		
+		ConvertOneStringToAnother convertTo=new ConvertOneStringToAnother();
+		
+		System.out.println(convertTo.findMinOperations("table", "tbres"));
 	}
 
 }
