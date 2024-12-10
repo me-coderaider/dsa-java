@@ -1,16 +1,12 @@
-import divide_and_conquer.zero_one_knapsack.ZeroOneKnapsack;
+import divide_and_conquer.longest_common_subsequence.LongestCommonSubsequence;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Divide and Conquer -- Zero One Knapsack
+		// Divide and Conquer -- Longest Common Subsequence
 
-		ZeroOneKnapsack zoknapsack = new ZeroOneKnapsack();
-		int[] profits= {31,26,17,72};
-		int[] weights= {3,1,2,5};
-		int capacity=7;
-		// answer == 98
-		System.out.println(zoknapsack.zoKnapsack(profits, weights, capacity));
+		LongestCommonSubsequence lcs = new LongestCommonSubsequence();
+		System.out.println(lcs.findLCSLength("elephant", "erepat")); // 5 
 	}
 
 }
