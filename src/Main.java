@@ -1,18 +1,25 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
-import greedy_algorithms.coin_change_problem.CoinChangeProblem;
+import greedy_algorithms.fractional_knapsack_problem.FractionalKnapsack;
+import greedy_algorithms.fractional_knapsack_problem.KnapsackItem;
+
 
 class Main {
 
 	public static void main(String[] args) {
-		// Greedy Algorithms -- Coin Change Problem
-
-		int[] coins = { 1, 2, 5, 10, 20, 50, 100, 1000 };
-		int amount = 2035;
-
-		System.out.println("Coins available: " + Arrays.toString(coins));
-		System.out.println("Target amount: " + amount);
-		CoinChangeProblem.coinChangeProblem(coins, amount);
+		// Greedy Algorithms -- Fractional Knapsack Problem
+		
+		ArrayList<KnapsackItem> items=new ArrayList<KnapsackItem>();
+		int[] value= {100,120,60};
+		int[] weight= {20,30,10};
+		
+		int capacity=50;
+		
+		for(int i=0;i<value.length;i++) {
+			items.add(new KnapsackItem(i+1, value[i], weight[i]));
+		}
+		
+		FractionalKnapsack.knapsack(items, capacity);
 	}
 
 }
