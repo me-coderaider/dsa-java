@@ -1,12 +1,12 @@
-import divide_and_conquer.longest_common_subsequence.LongestCommonSubsequence;
+import divide_and_conquer.longest_palindromic_subsequence.LongestPalindromicSubsequence;
 
 class Main {
 
 	public static void main(String[] args) {
-		// Divide and Conquer -- Longest Common Subsequence
+		// Divide and Conquer -- LongestPalindromicSubsequence
 
-		LongestCommonSubsequence lcs = new LongestCommonSubsequence();
-		System.out.println(lcs.findLCSLength("elephant", "erepat")); // 5 
+		LongestPalindromicSubsequence lps = new LongestPalindromicSubsequence();
+		System.out.println(lps.findLPSLength("elrmenmet"));  //5
 	}
 
 }
